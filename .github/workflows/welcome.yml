@@ -28,9 +28,7 @@ jobs:
        - run: gh pr comment $PR_URL --body "Welcome to the repository!"
          env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           PR_URL: ${{ github.event.pull_request.html_url }}
-       - name: Checkout
-         uses: actions/checkout@v4
+           PR_URL: ${{ github.event.pull_request.html_url }}      
      outputs:
        current_step: ${{ steps.get_step.outputs.current_step }}
  
