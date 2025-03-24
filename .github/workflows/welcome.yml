@@ -1,4 +1,3 @@
-
 name: Post welcome comment
  
  # This step triggers after the learner creates a new repository from the template.
@@ -33,8 +32,6 @@ jobs:
        - name: Checkout
          uses: actions/checkout@v4
        - id: get_step
-       #  run: |
-       #    echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
      outputs:
        current_step: ${{ steps.get_step.outputs.current_step }}
  
@@ -96,4 +93,3 @@ jobs:
            from_step: 0
            to_step: 1
            branch_name: welcome-workflow
-
