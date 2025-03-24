@@ -30,9 +30,9 @@ jobs:
          env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
            PR_URL: ${{ github.event.pull_request.html_url }}
-       #- name: Checkout
-       #  uses: actions/checkout@v4
-       #- id: get_step
+       - name: Checkout
+         uses: actions/checkout@v4
+       - id: get_step
        #  run: |
        #    echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
      outputs:
