@@ -31,7 +31,6 @@ jobs:
            PR_URL: ${{ github.event.pull_request.html_url }}
        - name: Checkout
          uses: actions/checkout@v4
-       - id: get_step
      outputs:
        current_step: ${{ steps.get_step.outputs.current_step }}
  
