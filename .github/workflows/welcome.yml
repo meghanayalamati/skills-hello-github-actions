@@ -30,7 +30,7 @@ jobs:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
            PR_URL: ${{ github.event.pull_request.html_url }}
        - name: Checkout
-         uses: actions/checkout@v4
+         uses: actions/checkout@v5
        - id: get_step
      outputs:
        current_step: ${{ steps.get_step.outputs.current_step }}
@@ -54,7 +54,7 @@ jobs:
      steps:
        # We'll need to check out the repository so that we can edit the README.
        - name: Checkout
-         uses: actions/checkout@v4
+         uses: actions/checkout@v5
          with:
            fetch-depth: 0 # Let's get all the branches.
  
